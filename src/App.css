@@ -1,0 +1,508 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #202020;
+}
+
+html {
+  /* font-size: 62.5%; */
+  font-family: 'urbanist';
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #fff;
+}
+
+p,
+li,
+a,
+
+li {
+  list-style: none;
+}
+
+.navbar {
+  box-shadow: 2px 2px 10px white;
+}
+
+img {
+  margin-right: 9px;
+}
+
+
+
+
+/*----------------------- ABOUT SECTION-- ---------------------------  */
+
+
+/* MAIN WRAPPER */
+.about-container {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px 80px;
+  /* bottom padding for footer space */
+  color: white;
+}
+
+/* HEADER SECTION */
+.about-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  max-width: 500px;
+  line-height: 1.4;
+}
+
+/* CARD WRAPPER */
+.card-container-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* CARD GRID */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* CARD STYLING */
+.card {
+  background-color: #151515;
+  border-radius: 20px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+  background-color: #262424;
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.card-title {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* CARD TEXT */
+.card p {
+  color: #ccc;
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+.card p span {
+  color: #999;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+/* SCROLLBAR (OPTIONAL) */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3b3a3a;
+  border-radius: 10px;
+}
+
+
+
+/*<------------------ CONTACT SECTION -----------> */
+
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 70px;
+  gap: 10px;
+
+}
+
+/* Heading style */
+.contact-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  transform: translateZ(20px);
+}
+
+/* 3D Form Card */
+.contact-form {
+  width: 22rem;
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(30, 30, 30, 0.95);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transform: rotateX(5deg) rotateY(-3deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.contact-form:hover {
+  transform: rotateX(0deg) rotateY(0deg) scale(1.03);
+
+}
+
+/* Inputs */
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #222, #333);
+  box-shadow:
+    inset 2px 2px 5px #111,
+    inset -2px -2px 5px #444;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  box-shadow:
+    inset 2px 2px 5px #000,
+    inset -2px -2px 5px #c1e4e1;
+  transform: translateY(-2px);
+}
+
+/* Textarea */
+.form-textarea {
+  height: 6rem;
+  resize: none;
+}
+
+/* Button */
+.form-submit {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #101615, #525454);
+  color: #faf9f9;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow:
+    0 5px 15px rgba(130, 136, 136, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.form-submit:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow:
+    0 10px 20px rgba(91, 101, 101, 0.5),
+    inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+/*< ---------------FOOTER SECTION---------------------->  */
+
+.main-footer {
+  margin-bottom: 0px;
+  background-color: #111;
+}
+
+.footer-container {
+  width: 100%;
+  background-color: #111;
+  height: 90px;
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    /* ✅ Stack items vertically for small screens */
+    height: auto;
+    gap: 12px;
+
+  }
+}
+
+.footer-content {
+
+  color: #999;
+
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+}
+
+.footer-icon {
+  margin-top: 5px;
+}
+
+.footer-content p {
+  word-break: break-word;
+  /* ✅ breaks long emails */
+}
+
+.footer-last {
+  color: white;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 22rem; */
+  border-top: 1px solid white;
+  height: 80px;
+  align-items: center;
+}
+
+.footer-last p {
+  font-size: 13px;
+  padding: 5px;
+  color: #9c9d9d;
+  word-spacing: 3px;
+}
+
+.footer-last div {
+  display: flex;
+  gap: 7rem;
+  margin-top: 10px;
+
+}
+
+@media (max-width: 768px) {
+  .footer-last {
+    flex-direction: column;
+    gap: 10px;
+
+  }
+
+  .footer-last p {
+    text-align: center;
+  }
+
+  .footer-last div {
+    justify-content: space-evenly;
+    gap: 28px;
+      margin-top: 0px;
+  }
+}
+
+/* <-----------LOADER----------------> */
+
+
+
+
+/* <----------Country Section---------> */
+
+
+.country-container {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  padding-bottom: 100px; 
+
+}
+
+.country-box {
+  width: 85%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 30% 70%;
+   overflow-y: visible;
+
+}
+
+.country-box ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+ overflow-y: scroll;
+
+}
+
+
+.list-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.country-box li {
+  width: 200px;
+  height: 300px;
+  background-color: rgb(17, 17, 18);
+  border-radius: 10px;
+  box-shadow:
+   
+    inset -2px -2px 5px #444;
+  
+}
+ .country-box li:hover{
+ 
+ }
+
+li img{
+  width: 120px;
+  height: 80px;
+  margin-left: 20px;
+  margin-top: 19px;
+  border-radius: 5px;
+}
+li button{
+   width: 50%;
+  padding: 0.3rem;
+  border-radius: 50px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #faf9f9;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease;
+}
+
+li button:hover{
+ transform: scale(1.06);
+}
+.country-content{
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.country-upper-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.country-input{
+  border: 1px solid white;
+  margin-top: 10px;
+  border-radius: 4px;
+  box-shadow: inset 1px 1px 3px white;
+  height: 30px;
+  margin-left: 15px;
+  width:300px ;
+  background-color: #202020;
+}
+
+.country-input::placeholder{
+  padding-left: 10px;
+}
+@media (max-width: 768px) {
+  .country-box{
+     display: grid;
+    grid-template-rows: 30% 70%;
+    width: 80%;
+  }
+  .country-box ul {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .country-box li {
+    width: 100%;
+  }
+
+  .country-upper-box{
+    flex-direction: column;
+    justify-content: space-around;
+    
+  
+  }
+ 
+  select {
+    width: 6.6rem;
+    border: 1px solid white;
+    height: 30px;
+  }
+    select option{
+      background-color: #525454;
+      width: 10px;
+    }
+  .country-input{
+    width: 270px;
+  }
+}
+
+
+/* <---------------------country data----------------------> */
+.countryData-box{
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.countryData-container{
+  background-color: rgb(16, 16, 15);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 3px white,
+  1px 1px 5px rgb(86, 80, 80);
+ 
+}
+.countryData-container img{
+  border-radius: 10px;
+ align-items: center;
+  width: 230px;
+  height: 150px;
+
+}
+.country-details-container{
+  margin-top: 20px;
+  margin-left: 20px;
+  
+}
+@media (max-width: 768px) {
+  .countryData-container{
+    width: 90%;
+  }
+}

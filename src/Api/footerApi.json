@@ -1,0 +1,22 @@
+[
+
+     {
+        "icons":"MdPlace",
+        "title":"Find us",
+        "details":"Nautanwa Maharajganj"
+    }
+  ,
+    
+     {
+        "icons":"IoCall",
+        "title":"Call us",
+        "details":"9696238882"
+    }
+    ,
+    {
+        "icons":"TbMail",
+        "title":"Mail us",
+        "details":"harshpandey@gmail.com"
+    }
+]
+   
