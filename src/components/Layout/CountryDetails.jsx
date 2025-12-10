@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useTransition } from "react";
-import { useParams } from "react-router";
+import { NavLink, useParams } from "react-router";
 import { getIndividualCountriesData } from "../../Api/PostApi";
 
 const CountryDetails = () => {
@@ -68,7 +68,8 @@ const CountryDetails = () => {
       </div>
      
       </div>
-       <button className=" md:top-160  w-[200px] rounded-2xl h-[40px] bg-gray-800 text-white font-bold text-xl border-1  absolute top-190 cursor-pointer ">Go Back</button>
+      <NavLink className=" md:top-160  w-[200px] rounded-2xl h-[40px] bg-gray-800 text-white font-bold text-xl border-1  absolute top-190 cursor-pointer flex justify-center " to='/country'> <button className="cursor-pointer" >Go Back</button></NavLink>
+      
       </section>
     </>
   );

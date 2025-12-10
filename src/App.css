@@ -249,25 +249,15 @@ img {
 .footer-container {
   width: 100%;
   background-color: #111;
-  height: 90px;
   padding: 10px;
-
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+
   overflow: hidden;
 
 }
 
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: row;
-    /* ✅ Stack items vertically for small screens */
-    height: auto;
-    gap: 12px;
 
-  }
-}
 
 .footer-content {
 
@@ -286,8 +276,17 @@ img {
 }
 
 .footer-content p {
-  word-break: break-word;
-  /* ✅ breaks long emails */
+
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    
+
+  }
 }
 
 .footer-last {

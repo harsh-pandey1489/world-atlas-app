@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaArrowRightLong } from "react-icons/fa6";
+import { NavLink } from 'react-router';
 
 const HeroSection = () => {
     return (
@@ -26,9 +27,11 @@ const HeroSection = () => {
                         </p>
 
                         <div className=' md:w-full'>
-                            <button className='cursor-pointer mt-4 border-2 w-[10rem] border-white bg-black text-white font-medium px-6 py-3 rounded-2xl flex items-center justify-center gap-2 hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all duration-300'>
+                           <NavLink to='/country'>
+                             <button className='cursor-pointer mt-4 border-2 w-[10rem] border-white bg-black text-white font-medium px-6 py-3 rounded-2xl flex items-center justify-center gap-2 hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all duration-300'>
                                 Start Exploring <FaArrowRightLong className='text-lg' />
                             </button>
+                           </NavLink>
                         </div>
 
                     </div>
