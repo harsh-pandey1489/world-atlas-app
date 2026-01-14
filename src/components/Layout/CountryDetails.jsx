@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useTransition } from "react";
 import { NavLink, useParams } from "react-router";
-import { getIndividualCountriesData } from "../../Api/PostApi";
+import { getIndividualCountriesData ,getBorderCountriesByCodes } from "../../Api/PostApi";
 
 const CountryDetails = () => {
   const params = useParams();
   const [isPending, startTransition] = useTransition();
   const [countryData, setCountryData] = useState(null);
+  const [borderNames, setBorderNames] = useState([]);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +27,17 @@ const CountryDetails = () => {
   }, [params.id]);
 
   console.log(countryData);
+  useEffect(() => {
+  if (countryData?.borders?.length > 0) {
+    getBorderCountriesByCodes(countryData.borders.join(","))
+      .then((res) => {
+        const names = res.data.map((c) => c.name.common);
+        setBorderNames(names);
+      })
+      .catch((err) => console.log(err));
+  }
+}, [countryData]);
+
 
   // Show loader while waiting
   if (!countryData) {
@@ -45,7 +58,11 @@ const CountryDetails = () => {
     : "N/A";
 
   const languageList = languages ? Object.values(languages).join(", ") : "N/A";
-  const borderList = borders ? borders.join(", ") : "None";
+const borderList =
+  borderNames.length > 0
+    ? borderNames.join(", ")
+    : "No border countries";
+
   return (
     <>
     <section className="w-full h-[90vh] flex justify-center items-center">
@@ -64,8 +81,7 @@ const CountryDetails = () => {
 
 
 
-     
-      </div>
+     </div>
      
       </div>
       <NavLink className=" md:top-160  w-[200px] rounded-2xl h-[40px] bg-gray-800 text-white font-bold text-xl border-1  absolute top-190 cursor-pointer flex justify-center " to='/country'> <button className="cursor-pointer" >Go Back</button></NavLink>
